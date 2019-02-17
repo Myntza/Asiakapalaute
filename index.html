@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Anna asiakaspalautetta</title>
+
+<!--Bootstrap 4 lisäys-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!---Omat tyylit-->
+<link rel="stylesheet" href="style.css">
+
+<!---Fontti-->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+<!--Scripti checkboxeille-->
+<script src="scripts.js"></script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<h1>Huoneistohotelli Lietsun palautekysely</h1>
+
+    <form>
+        <div class="form-group col-lg">
+          <label for="email">Huoneen numero</label>
+          <input type="text" class="form-control" id="roomnumber" placeholder="Anna huoneen numero">
+
+
+            <label for="email">Sähköposti</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Anna sähköposti">
+            <small id="emailHelp" class="form-text text-muted">Sähköposti mahdollista yhteydenottoa varten!</small>
+         
+
+          
+                <label class="my-1 mr-2" for="select">Voisitko suositella hotellia muille?</label>
+                <select class="custom-select my-1 mr-sm-2" id="select">
+                  <option selected>Kyllä</option>
+                  <option value="no">En</option>
+                </select>
+           
+
+          
+                <label class="my-1 mr-2" for="select2">Oletko havainnut huoneessasi puutteita?</label>
+                <select class="custom-select my-1 mr-sm-2" id="select2">
+                  <option selected>En</option>
+                  <option value="Yes">Kyllä</option>
+                </select>
+
+
+            <!-- If selected Yes this come visible-->
+            <div id="needs">
+
+             <label class="needs">Mihin puutteet ovat liittyneet?</label>
+            <div class="checkbox">
+              <label><input type="checkbox" id="toiletpaper" class="mr-1" value="toiletpaper">WC-paperi</label>
+            </div>
+
+            <div class="checkbox">
+              <label><input type="checkbox" id="cloth" class="mr-1" value="cloth">Pyyhkeet tai liinavaatteet</label>
+            </div>
+
+            <div class="checkbox">
+                <label><input type="checkbox" id="accessories" class="mr-1" value="accessories">Keittiötarvikkeet ja astiat</label>
+            </div>
+
+            <div class="checkbox">
+                  <label><input type="checkbox" id="temperature" class="mr-1" value="temperature">Huoneiston lämpötila</label>
+            </div>
+
+            <div class="checkbox">
+                  <label><input type="checkbox" id="cleaning" class="mr-1" value="cleaning">Huoneiston siisteys</label>
+            </div>
+
+          </div>
+            <label for="text">Anna vapaamuotoista palautetta</label>
+            <textarea class="form-control" id="text" rows="3" placeholder="Haluaisitteko kertoa meille jotain muuta tai kysyä meiltä jotain? Vastaamme teille mahdollisimman pian!"></textarea>
+          </div>
+        
+        <button type="submit" class="btn btn-dark">Lähetä palaute</button>
+      </form>
+</div>
+
+</body>
+
+</html>
