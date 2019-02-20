@@ -6,19 +6,19 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>Anna asiakaspalautetta</title>
 
-<!--Bootstrap 4 lisäys-->
+<!--Bootstrap 4-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<!---Omat tyylit-->
+<!---Styles-->
 <link rel="stylesheet" href="style.css">
 
-<!---Fontti-->
+<!---Font-->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
-<!--Scripti checkboxeille-->
+<!--Scripts-->
 <script src="scripts.js"></script>
 
 </head>
@@ -27,23 +27,12 @@
 
 <div class="container">
 
-
-<!--
-
-
-  Muokattu otsikko formin sisälle ja viilaitu tyylejä
-  Lisätty form groupit bootstrap documentaation mukaisesti oikein. 
-  Lisätty myös formin button formin sisään
-  Vaihdettu kieltä varten myös (ei ja kyl vaihettu koodista yes ja no) :D
-
-
--->
-    <form>
+    <form id="feedbackForm">
         <h1>Huoneistohotelli Lietsun palautekysely</h1>
-
+<!--Roomnumber must be 0-999-->
         <div class="form-group col-lg">
           <label for="email">Huoneen numero</label>
-          <input type="text" class="form-control" id="roomnumber" placeholder="Anna huoneen numero">
+          <input type="number" min="1" max="999" class="form-control" id="roomNumber" placeholder="Anna huoneen numero">
           <small id="roomNumberHelp" class="form-text text-muted">Anna huoneen numero</small>
         </div>
 
@@ -84,7 +73,7 @@
 
             <label class="needs">Mihin puutteet ovat liittyneet?</label>
             <div class="checkbox">
-              <label><input type="checkbox" id="toiletpaper" class="mr-1" value="toiletpaper">WC-paperi</label>
+              <label><input type="checkbox" id="toiletpaper" class="mr-1" value="toiletPaper">WC-paperi</label>
             </div>
 
             <div class="checkbox">
@@ -103,7 +92,7 @@
                   <label><input type="checkbox" id="cleaning" class="mr-1" value="cleaning">Huoneiston siisteys</label>
             </div>
 
-            <!-- Lisätty tarkempi kuvaus-->
+            <!-- Added -->
             <label for="text">Haluamme korjata puutteen – kerrottehan siitä tarkemmin?</label>
             <textarea class="form-control" id="text" rows="3" placeholder="Puutteen tarkempi kuvaus."></textarea>
             
